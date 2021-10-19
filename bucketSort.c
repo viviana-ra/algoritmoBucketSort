@@ -1,5 +1,5 @@
 #define N 10
-int a[N] = {543, 12, 84, 57, 69, 41, 9, 5,465,723}; 
+int a[] = {5,2,9,0,7,1,3,6,4,8}; 
 
 
 int getMax(int a[], int n){  
@@ -11,10 +11,9 @@ int getMax(int a[], int n){
 }  
 
 void bucket(int a[], int n){  
-  int max = getMax(a, n); //max is the maximum element of array  
-  int bucket[max], i;  
-  for (int i = 0; i <= max; i++)  
-  {  
+  int max = getMax(a, n); 
+  int bucket[max];  
+  for (int i = 0; i <= max; i++){  
     bucket[i] = 0;  
   }  
   for (int i = 0; i < n; i++){  
@@ -30,7 +29,7 @@ void bucket(int a[], int n){
 
 int main( ){
     
-    bucket(a, N);  
+    bucket(a,N);  
     
     return 0;
 }
